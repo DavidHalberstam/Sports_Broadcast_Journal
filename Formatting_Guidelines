@@ -1,0 +1,46 @@
+# HTML Basics
+    HTML formatting uses short code snippets called opening and closing tags.  <> indicates the start of a tag, while </> represents the end of the code.  The regular body text and input information goes between these tags.
+
+## Headings
+
+    <h1>insert main header text here</h1>
+    <h2>page subtitle</h2>
+    <h3>Regular headings should use the h3 style</h3>
+    <h4>All interview questions should use h4 heading</h4>
+    <h5>h5 headings can be used for widget subtitles<h5>
+    <h6>h6 subtitles are rarely used</h6>
+ 
+## Font styling
+    <em>Italic text</em> or <b>Italic text</b>
+    <u>Underlined text</u>
+    <strong>Bold text</strong> or <b>Bold text</b>    
+
+## Body Element styling
+    <div>A div is a container used to wrap around body text and image elements</div>
+    <p>paragraph</p>
+
+## Links, Images, and Video
+This is a basic hyperlink.
+
+    <a href="https://www.sports-announcers.com">https://www.sports-announcers.com</a>
+
+Images can usually be copied and pasted or inserted via the media settings, but this is what the code looks like.
+
+    <img src="smiley.gif" alt="Smiley face" height="42" width="42"> 
+    
+Videos can be embedded by copying and pasting the url, but it is generally better to copy the embed link and place the code inside the video container div.  This will format the video so that it scales properly on mobile devices.
+
+    <div class="video-container"><iframe src="https://www.youtube.com/embed/hFzUG3_CtGU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
+
+## Lists
+
+    <ul>Bulleted list </ul> or <ol>Numbered list</ol>
+    <li>List item 1</li>
+    
+    ex.
+    <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+    </ul>
