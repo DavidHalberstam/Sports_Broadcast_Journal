@@ -8,32 +8,34 @@ http://www.sportsbroadcastjournal.com/
 https://www.sports-announcers.com/ 
 - (301 redirect in .htaccess)
 - SSL certificate by Comodo (valid through 2019)
+- WHOIS information is public for SSL verification purposes
 
 https://www.sportsannouncersreportcard.com/
 - (Weebly Hosting)
 
 ## Hosting:
 - AT&T Web Hosting (shared service) 2018
+- IP 216.55.149.9
+- FTP compatible
+
+## Database:
 - Database: Carrierzone
-- FTP IP 216.55.149.9
-- WHOIS information is public for SSL verification purposes
+- MySQL
 
 ## Additional Compatibility: 
 - CloudFlare CDN (inactive account)
+- To activate CDN, switch the host nameservers and wait 48 hours for transition
 
 ## Core Frameworks:
 - WordPress CMS v.4.9.5
-- Custom Child Theme 
-- News Portal theme by Mystery Themes
+- News Portal theme by Mystery Themes v.1.1.4
+- Custom Child Theme News-Portal-Child
 
 ## Extension Frameworks:
 - WP Customizer
 - Foundation Template
 - Walker Nav Menu
 - FontAwesome icons library
-
-## Database:
-- MySQL
 
 ## Features:
 - Secure HTTPS://
