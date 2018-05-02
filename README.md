@@ -20,7 +20,7 @@ https://www.sportsannouncersreportcard.com/
 
 ## Database:
 - Database: Carrierzone
-- MySQL
+- MySQL 5.0 or Higher
 
 ## Additional Compatibility: 
 - CloudFlare CDN (inactive account)
@@ -28,6 +28,7 @@ https://www.sportsannouncersreportcard.com/
 
 ## Core Frameworks:
 - WordPress CMS v.4.9.5
+- PHP 5.2.4 or Higher
 - News Portal theme by Mystery Themes v.1.1.4
 - Custom Child Theme News-Portal-Child
 
