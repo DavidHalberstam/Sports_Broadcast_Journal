@@ -160,3 +160,29 @@ Use this custom query loop code to sort multiple loops by category IDs.
 Insert this code to add author byline and date to grid posts
 
     <h6 class="grid-post-subtitle"><?php _e('By', 'news portal' );?> <?php The_author_posts_link(); ?> &nbsp &nbsp <span class="entry-date"><?php echo get_the_date(); ?></span></h6>	
+    
+Use this code to add category filter option to WP Customizer options
+
+    $wp_customize->add_setting(
+        'news_portal_grid_categories',
+        array(
+            'default'      => __( '' ),
+            'sanitize_callback' => 'sanitize_text_field'
+            )
+    );
+	
+    $wp_customize->add_control(new WP_Customize_Control ($wp_customize,
+        'news_portal_grid_categories',
+        array(	 
+		'type'      => 'select',
+        'label'     => esc_html__( 'Sort by Category', 'news-portal-child' ),
+        'section'   => 'news_portal_grid_section',
+		'description' => __( 'Leave it empty to display all', 'news-portal-child' ),
+        'choices'        => array(
+			    'cat'    => __( 'Announcers' ),
+				'featured'  => __( 'Featured' ),
+                'interviews'  => __( 'Interviews' ),
+				'news'  => __( 'News' )
+            )
+			))
+    );
