@@ -1,3 +1,8 @@
+Copy and paste snippet in the primary excerpt container to use the customizer color category tags
+
+	<span class="blog-post-cat"><?php news_portal_single_post_categories_list(); ?>
+		</span>
+
 This code should be used for the related posts.
 
     <div class="np-single-post np-clearfix">
