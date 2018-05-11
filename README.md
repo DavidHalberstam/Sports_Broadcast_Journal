@@ -76,3 +76,4 @@ https://www.sportsannouncersreportcard.com/
 - Google Page Speed Insights
 - Google Mobile Friendly Test
 - Why No Padlock
+- Redirect Detective
