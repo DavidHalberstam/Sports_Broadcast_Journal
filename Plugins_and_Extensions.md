@@ -30,6 +30,7 @@
 - Regenerate Thumbnails
 - String Locator
 - WP Importer/Exporter
+- UpdraftPlus Backup/Restore
 
 ## Recommended Upgrades and Maintenance:
 - Web Hosting Service Provider
