@@ -1,25 +1,33 @@
-## Essential Plugins:
+# Essential Plugins
+
+## Optimization and Admin Extensions
 - Yoast
+- WP Smush
+- WP Super Cache
+- Autoptimize
+- Speed Booster Pack
+- A3 Lazy Load
+- Tiny MCE Advanced
+- Secondary Title
+- Widget Options
+- TablePress
+- Contact Form 7
+- WP User Avatar
+
+# Security Plugins
 - Wordfence
 - Akismet
 - Google Captcha
 - Email Address Encoder
-- WP Smush
-- WP Super Cache
-- Autoptimize
-- A3 Lazy Load
-- Tiny MCE Advanced
-- TablePress
-- Contact Form 7
-- WP User Avatar
-- Widget Options
-- Secondary Title
+
+## Cosmetic
+- Advanced Random Posts Widget
+- Top 10
 - Sassy Social Share
 - Native Emoji
 - WpDiscuz Comments
-- Advanced Random Posts Widget
 
-## Other Maintenance Tools:
+## Other Maintenance Tools
 - Debug Bar
 - Theme Check
 - Better Search Replace
