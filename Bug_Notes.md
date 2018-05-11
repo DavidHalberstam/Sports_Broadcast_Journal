@@ -31,6 +31,8 @@
 
 ## Resolved:
 
+- *5/11/18*- A 302 Temporary Redirect chain appeared, adding a string to a stylesheet.css file.  The root of the issue was traced back to the header.php file.  The href link needed to be changed to point to the entire root of the style.css directory.
+<link type="text/css" rel="stylesheet" href="http://www.sportsbroadcastersjournal.com/wp-content/themes/news-portal-child/style.css"/>
 - *4/30/18*- The text overlay was causing the bottom portion of the permalink overlay on the grid images to become unselectable, due to the linked div using position:block.  Copying the div with the permalink again after the text div seems to cover the entire photo with a link overlay. 
 - *4/25/18*- Comments imported
 - *4/18/18*- The Yoast generated sitemap exprienced an issue where it would not display the www part of the web address.  This had to be resolved by disabling the XML sitemap, clearing out browser caching, refreshing the permalinks, and then turning the XML sitemap generator back on.
