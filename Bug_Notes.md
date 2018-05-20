@@ -2,9 +2,7 @@
 
 <em>Note: To enable the full Error Log, enable Debug options in the wp-config file via FTP.</em>
 
-- *4/16/18*- The pagination is adding an extra blank page at the end, again.  It is likely another issue related to the offset.  The $offset=$option_offset; seems to be the culprit.  Inexplicably this adds an offset to the last page, even though switching the customizer control $option_offset; with a regular number value works without adding the blank page. 
 - *4/14/18*- The posts should not duplicate.  This can only be done if the plugins are removed and substituted to go in the main loop as a multiple pass loop.
-- *4/14/18*- The Top 10 plugin has not performed as well as expected in testing.  The settings need to be adjusted to update more frequently than 24-48 hour intervals, but not so frequently that empty space occurs when visitors are scarce
 - *4/14/18*- The related posts encounter a bug if more than 3 are displayed.  Instead of floating to the left, the containers sometimes do not load correctly in a straight line.  This is likely caused by the different lengths of titles, that can range from 1-3 lines.  Setting a height for the container and using inline-block constraints might fix this.
 - *4/14/18*- Instead of using responsive images that can get squished or stretched, it would be better to set a definite aspect ratio width using the background-size:contain.  Most websites seem to do this instead of squishing images, even though it does not always conform well to responsive layout on mobile.
 
@@ -17,6 +15,7 @@
 
 - The database was last optimized on 4/18/2018
 - The site files and database were backed up on 4/18/2018
+- Github Theme backup on 5/20/2018
 
 ## Theme Customization Notes:
 
@@ -31,14 +30,16 @@
 
 ## Resolved:
 
+- *5/20/18*- Added Facebook Like JS to header and single post
 - *5/11/18*- A 302 Temporary Redirect chain appeared, adding a string to a stylesheet.css file.  The root of the issue was traced back to the header.php file.  The href link needed to be changed to point to the entire root of the style.css directory.
-<link type="text/css" rel="stylesheet" href="http://www.sportsbroadcastersjournal.com/wp-content/themes/news-portal-child/style.css"/>
 - *4/30/18*- The text overlay was causing the bottom portion of the permalink overlay on the grid images to become unselectable, due to the linked div using position:block.  Copying the div with the permalink again after the text div seems to cover the entire photo with a link overlay. 
 - *4/25/18*- Comments imported
 - *4/18/18*- The Yoast generated sitemap exprienced an issue where it would not display the www part of the web address.  This had to be resolved by disabling the XML sitemap, clearing out browser caching, refreshing the permalinks, and then turning the XML sitemap generator back on.
 - *4/17/18*- Insecure mixed content was changed to https.  Code to force https was inserted into the .htaccess and wp-config files, redirecting all content to https.
 - *4/17/18*- Image backgrounf thumbs needed to be center-aligned using background-position CSS.
-- *4/15/18*- The customizer extension for grid settings needed to be declared as a variable.  This was fixed by getting rid of the action hook and just setting the return variable as $option_pg_number = get_theme_mod('np_posts_per_page', '5');.  The  $option_pg_number variable then gets substituted with the $posts_per_page variable.  
+- *4/16/18*- The pagination is adding an extra blank page at the end, again.  It is likely another issue related to the offset.  The $offset=$option_offset; seems to be the culprit.  Inexplicably this adds an offset to the last page, even though switching the customizer control $option_offset; with a regular number value works without adding the blank page. 
+- *4/15/18*- The customizer extension for grid settings needed to be declared as a variable.  This was fixed by getting rid of the action hook and just setting the return variable as $option_pg_number = get_theme_mod('np_posts_per_page', '5');.  The  $option_pg_number variable then gets substituted with the $posts_per_page variable. 
+- *4/14/18*- The Top 10 plugin has not performed as well as expected in testing.  The settings need to be adjusted to update more frequently than 24-48 hour intervals, but not so frequently that empty space occurs when visitors are scarce
 - *4/14/18*- Adjusted the boxed layout settings to work responsively and removed the superfluous menu masthead that was hidden in the .np-header-menu-wrapper::before and ::after CSS.
 - *4/5/18*- The parent template-functions.php file needs to be overridden by the child-theme to display the modified underline color tags.  The color tag can be switched to background to create a button look.  This was achieved by deregistering an action hook in the template-functions.php, then requiring a custom template with a different function name in the child theme.
 - *4/4/18*- Tags were mysteriously appearing in the fourth footer widget, despite lacking any evident divs or hooks. The source turned out to be an innocuous snippet the_tags() buried in the sidebar-footer.php
