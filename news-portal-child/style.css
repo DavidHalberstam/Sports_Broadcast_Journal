@@ -1,0 +1,2016 @@
+/* 
+Theme Name:		 News Portal Child
+Theme URI:		 http://www.sportsbroadcastersjournal.com/wp-content/themes/news-portal-child/
+Description:	 Child theme
+Author:			 Jason Conger-Kallas
+Author URI:		 https://github.com/DavidHalberstam/Sports_Broadcast_Journal
+Template:		 news-portal
+Version:		 1.0.0
+Text Domain:	 news-portal-child
+Tags:            grid-layout, one-column, left-sidebar, right-sidebar, footer-widgets, full-width-template, theme-options, rtl-language-support
+-------------------------------------------------------------- */ 
+
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+    color: #3d3d3d;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 46px;
+	line-height: 50px;
+	font-family: 'Roboto','Raleway', sans-serif;
+	color: #000;
+	font-weight: 700;
+	margin-top:0px;
+}
+h1.entry-title {
+	font-family: 'Roboto','Raleway', sans-serif;
+	color: #000;
+	font-weight: 700;
+    line-height: 48px;
+    font-size: 42px;
+}
+article.hentry h1.entry-title {
+	font-family: 'Roboto','Raleway', sans-serif;
+	font-weight: 700;
+	color: #000;
+	margin-top:0;
+    margin-bottom: 5px;
+    line-height: 48px;
+	font-size: 42px;
+}
+.page-header h1.page-title {
+    margin-bottom: 0px;
+    
+}
+h2 {
+	font-family: 'Roboto','Raleway', sans-serif;
+	color: #000;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 34px;
+}
+h2.entry-title {
+	font-family: 'Roboto','Raleway', sans-serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	line-height: 24px;
+	color: #000;
+	font-weight: 700;
+}
+h2.entry-title a{
+	font-family: 'Roboto','Raleway', sans-serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	line-height: 24px;
+	color: #000;
+	font-weight: 700;
+}
+h2.entry-subtitle{
+	font-family: 'Roboto', 'Ubuntu','Raleway','Alegreya Sans','Fjalla One',sans-serif;
+	font-size: 22px;
+	line-height:26px;
+	color: #000;
+	font-weight:500;
+	margin-bottom:7px;
+}
+h3 {
+    font-size: 20px;
+	color: #000;
+}
+
+h4 {
+    font-size: 16px;
+	color: #000;
+}
+h4 a{
+	color: #000;
+}
+h4.widget-title {
+    background: none;
+	border-style: none;
+	color: #000;
+}
+h5 {
+    font-size: 16px;
+	color: #000;
+}
+h5 a{
+	color: #000;
+}
+
+h6 {
+    font-size: 14px;
+	color: #777;
+	font-weight: normal;
+	line-height: 1.3;
+	margin-bottom:5px;
+}
+h6 a{
+	color: #777;
+}
+h6 a:hover{
+	color: #777;
+}
+h6.single-author-slug {
+    font-size: 14px;
+	color: #777;
+	font-weight: normal;
+	line-height: 16px;
+	margin-bottom:12px;
+}
+
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+#site-navigation ul#primary-menu>li:hover>a:after,
+#site-navigation ul#primary-menu>li.current-menu-item>a::after {
+    content:none;
+}
+.np-header-menu-block-wrap{
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+.main-navigation{
+	background: #fff;
+}
+#primary-menu.menu{
+	background: #fff;
+}
+#primary-menu.menu-item{
+	background: #fff;
+}
+#primary-menu.menu a{
+    color: #000 !important;
+	font-weight:400;
+	font-size:11px;
+	font-family: 'Rubik Mono One','Roboto','Raleway', sans-serif;
+}
+#site-navigation ul.sub-menu,
+#site-navigation ul.children {
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    min-width: 200px;
+    position: absolute;
+    top: 120%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#site-navigation ul li:hover>a,
+#site-navigation ul li.current-menu-item>a,
+#site-navigation ul li.current_page_item>a,
+#site-navigation ul li.current-menu-ancestor>a {
+    background: #ccc;
+}
+.np-header-menu-wrapper .mt-container::before {
+    background: none;
+}
+.np-top-header-wrap{
+	padding:0px 0 0px 0;
+	margin-top: 0px;
+	background: #222;
+}
+.np-top-left-section-wrapper {
+    float: right;
+	padding: 3px 5px 0px 5px;
+    font-size: 12px;
+}
+.np-header-social-wrapper{
+	display: inline;
+	padding: 5px 5px 0px 5px;
+	float:right;
+}
+.np-logo-section-wrapper{
+	height:40px;
+	padding: 0 0 0 0;
+	margin: 0px;
+}
+.np-logo-section-wrapper.mt-container{
+	height:40px;
+}
+#masthead .site-branding {
+    float: left;
+    margin: 0px 0;
+}
+#np-menu-wrap .site-branding {
+    float: left;
+    margin: 0px 0;
+}
+.custom-logo-link{
+	margin: 0px;
+	padding: 0 0px 0 20px;
+}
+#np-menu-wrap{
+	margin-bottom: 0;
+}
+#np-logo-section-wrapper{
+	height: 0px;
+	display:none;
+}
+.search-main{
+	color:#000;
+}
+.menu-toggle.hide{
+	color:#000;
+}
+i.fa.fa-navicon{
+	color:#000;
+}
+/*--------------------------------------------------------------
+Remove superfluous boxed layout menu tabs
+--------------------------------------------------------------*/
+.np-header-menu-wrapper::before,
+.np-header-menu-wrapper::after {
+    background: none;
+    content: "";
+    height: 100%;
+    left: -5px;
+    position: absolute;
+    top: 0;
+    width: 5px;
+    z-index: 99;
+}
+.np-header-menu-block-wrap::before,
+.np-header-menu-block-wrap::after {
+    border-bottom: 0px solid transparent;
+    border-right: 0px solid #03717f;
+    border-top: 0px solid transparent;
+    bottom: 0px;
+    content: "";
+    height: 0;
+    left: 0px;
+    position: absolute;
+    width: 0px;
+}
+.np-header-menu-block-wrap::after {
+    left: auto;
+    right: 0px;
+    transform: rotate(180deg);
+    display:none;
+}
+
+/*--------------------------------------------------------------
+Master Content Width
+--------------------------------------------------------------*/
+#content {
+    margin-top: 0;
+}
+.home.blog #content .mt-container {
+	max-width: 1300px;
+	margin: 0px auto;
+}
+.mt-container {
+	width: 1300px;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+#all-content-wrapper{
+	background: #fff;
+	width:100%;
+	padding: 20px 20px 20px 20px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+body {
+    font-weight: 400;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+
+body.fullwidth-layout #page {
+    background: #fff none repeat scroll 0 0;
+}
+.home #primary.content-area{
+	width:70%;
+	padding: 0 20px 0px 0px;
+}
+.page .entry-content{
+	padding: 0 25px 0px 25px;
+}
+#primary.content-area{
+	width:70%;
+	padding: 0 40px 0 0px;
+}
+.article-content{
+	padding: 0 25px 0px 25px;
+}
+#secondary,
+.home.blog #secondary {
+    float: right;
+	padding-top:25px;
+    width: 30%;
+}
+#home-content{
+	width:100%;
+	padding:0 0 20px 0;
+}
+.row{
+	width:100%;
+}
+.top-footer-full-width{
+	display:block;
+	width:100%;
+	overflow: hidden;
+}
+/*--------------------------------------------------------------
+Boxed Layout
+--------------------------------------------------------------*/
+.boxed_layout #page {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+	width:100%;
+    max-width: 1050px;
+    background: #ffffff;
+}
+.boxed_layout .mt-container {
+	width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+/*--------------------------------------------------------------
+Index Alt Blog Post Styles
+--------------------------------------------------------------*/
+.category-posts-container{
+	position: relative;
+  	float:left;
+	width:25%;
+	margin:0 0 0 0;
+	padding:0 10px 0 10px;
+}
+/*--------------------------------------------------------------
+Content
+--------------------------------------------------------------*/
+#blog-layout{
+	padding: 0px 0 0px 0;
+	border-style: none;
+	border: none;
+	border-width: 0;
+	overflow: hidden;
+}
+.post{
+	border-style: hidden;
+	border: none;
+	border-width: 0;
+	overflow: hidden;
+	margin:0;
+}
+.excerpt-container{
+	font-size: 14px;
+	line-height: 16px;
+}
+.primary_post_container{
+	width:100%;
+	padding: 10px 0 10px 0;
+	overflow:hidden;
+}
+
+.primary_image_container{
+	position: relative;
+  	float:left;
+	width:30%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+
+.primary_excerpt_container{
+	position: relative;
+    float:right;
+	max-height:150px;
+	width:70%;
+	margin:0 0 0 0;
+	padding:0 20px 0 20px;
+	overflow:hidden;
+}
+
+.primary_excerpt_container h6{
+	color: #777;
+	font-size: 12px;
+}
+.primary_excerpt_container h6 a{
+	color: #777;
+}
+.lightbox-overlay {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat; 
+	max-width:100%;
+	height: 150px;
+	
+}
+.lightbox-overlay:hover {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+.lightbox--item-meta {
+    height: 160px;
+	width:100%;
+	position: relative;
+	padding:0 0 0 0;
+}
+.lightbox--item-meta:hover {
+ 
+}
+.lightbox-links{
+	width:100%;
+	height:100%;
+	display:block;
+	width:100%;
+	position: absolute;
+	background: #000;
+	padding: 0px 0px 0px 0px;
+	opacity:.0;
+  	bottom: 0px;
+	overflow: hidden;
+}
+.lightbox-link {
+  	float: left;
+	width:100%;
+	height:100%;
+	bottom:0px;
+}	
+/*--------------------------------------------------------------
+Sidebar Featured Images
+--------------------------------------------------------------*/
+.sidebar-posts-container{
+	width:100%;
+	overflow:hidden;
+}
+.sidebar-thumbs-lightbox-overlay {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat; 
+	max-width:100%;
+	height: 230px;	
+}
+.sidebar-thumbs-lightbox-overlay:hover {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+.sidebar-thumbs-lightbox--item-meta {
+    height: 230px;
+	width:100%;
+	position: relative;
+	padding:0 0 0 0;
+}
+.sidebar-thumbs-lightbox--item-meta:hover {
+ 
+}
+.sidebar-thumbs-lightbox-links{
+	width:100%;
+	height:100%;
+	display:block;
+	width:100%;
+	position: absolute;
+	background: #000;
+	padding: 0px 0px 0px 0px;
+	opacity:.0;
+  	bottom: 0px;
+	overflow: hidden;
+}
+.sidebar-thumbs-lightbox-link {
+  	float: left;
+	width:100%;
+	height:100%;
+	bottom:0px;
+}	
+/*--------------------------------------------------------------
+Page Elements and Styling
+--------------------------------------------------------------*/
+.np-block-title,
+.widget-title,
+.page-header .page-title,
+.np-related-title {
+   color:#000;
+	background:none;
+	padding-left:0;
+	border-style:none;
+    text-transform: uppercase;
+}
+.featured_caption{
+	font-style:italic;
+	color: #777;
+}
+.wp-caption{
+	border-style:none;
+}
+.figure{
+	border-style:none;
+}
+.wp-caption-text{
+	font-style:italic;
+	text-align:center;
+	color: #777;
+}
+hr.gradient { 
+  border: 0; 
+  height: 1px; 
+  margin: 0;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #b2b0b0, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #b2b0b0, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #b2b0b0, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #b2b0b0, #f0f0f0); 
+}
+/*--------------------------------------------------------------
+Author Box
+--------------------------------------------------------------*/
+.author-box{
+	padding: 3% 3% 3% 3%;
+	display: inline-block;
+	border-style: solid;
+	border-width:1px;
+	border-color:#ddd;
+	overflow:auto;
+	width:100%;
+}
+.author-avatar{
+	float: left;
+	width:20%;
+	}
+.author-avatar img{
+	width:75%;
+	}
+.author-description{
+	float: right;
+	width:80%;
+	}
+.author-box h5 {
+	margin-top:0px;
+}
+.author-box .author_gravatar {
+	margin-right:10px;    			
+	border-radius: 50%;
+}
+.author-box p {
+    font-size: 14px;
+    font-size: 0.9em;
+}
+.author-box-social-icons {
+	width: 100%;
+	float: right;
+}
+
+/*----------- Video Embedding -----------*/
+embed,
+iframe,
+object {
+  	max-width: 100%;
+}
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	padding-bottom:.4em;
+}
+/*------------------ Related Posts --------------------*/
+h2.np-related-section-wrapper {
+	color:  #000;
+	margin-bottom: 10px;
+}
+h2.np-related-title {
+	color:  #000;
+	margin-bottom: 10px;
+}
+.np-related-section-wrapper{
+	width:100%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	position: relative;
+	overflow:hidden;
+	}
+.related-posts-wrapper{
+	position: relative;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+.related-posts-wrapper ul{
+	position: relative;
+	list-style:none;
+	margin:0 0 0 0;
+	padding:0 0px 0 0px;
+}
+.related-posts-wrapper li{
+	position: relative;
+	list-style:none;
+	width:33.3%;
+	margin:0 0 0 0;
+	padding:0 5px 0 5px;
+	float:left;
+}
+.related-posts-lightbox-overlay {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+	background-size: cover;
+	background-position:center center;
+	background-repeat: no-repeat;
+}
+.related-posts-lightbox-overlay:hover {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    opacity: 0.8;
+}
+.related-posts-lightbox--item-meta {
+    height: 160px;
+	max-height: 300px;
+	width:100%;
+	position: relative;
+	padding:0 0 0 0;
+}
+.related-posts-lightbox--item-meta:hover {
+    opacity: 0.8;
+}
+.related-posts-lightbox-links{
+	width:100%;
+	height:100%;
+	display:block;
+	width:100%;
+	position: absolute;
+	background: #000;
+	padding: 0px 0px 0px 0px;
+	opacity:.0;
+  	bottom: 0px;
+	float:left;
+	overflow: hidden;
+}
+.related-posts-lightbox-link {
+  	float: left;
+	width:100%;
+	height:100%;
+	bottom:0px;
+}	
+/*------------  Forms and Buttons --------------*/
+input.submit{
+	background: #000;
+}
+.navigation .nav-links a,
+.bttn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background: #000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 13px;
+    height: 33px;
+    border: none;
+    padding: 10px 15px;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    text-shadow: none;
+    border: none;
+}
+
+.bttn:hover,
+button,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    color: #ffffff !important;
+	border: none;
+}
+/* --------------  Tags  ------------------- */
+.article-cat {
+    color: #000 !important;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
+.article-cat a {
+    color: #000 !important;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
+span.blog-post-cat {
+    color: #777 !important;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+.blog-post-cat a{
+    color: #777 !important;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+span.post-cat{
+    padding: 0px 0px;
+    line-height: 11px;
+	font-size: 13px;
+	color: #777;
+	background:none;
+	text-transform: uppercase;
+}
+.post-cat a{
+    padding: 0px 0px;
+    line-height: 11px;
+	font-size: 13px;
+	color: #777;
+	background:none;
+	text-transform: uppercase;
+}
+.entry-footer {
+	border-style: none;
+}
+.tags-links{
+	border-style: none;
+	border-color: none;
+	height:18px;
+	line-height: 18px;
+	margin:5px 2px 5px 2px;
+	padding: 3px 3px 3px 3px;
+}
+.tags a {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    margin: 0px 5px;
+    padding: 2px 10px;
+    font-size: 13px;
+}
+/* -----------------------------------------
+   Widgets Sidebar and Plugins
+----------------------------------------- */
+.arpw-thumbnail {
+	max-height: 200px;
+}
+.arpw-random-post ul{
+margin:0 0 0 0;
+padding:0 0 0 0;
+}
+.arpw-random-post img{
+margin:0 0 0 0;
+padding:0px 0 5px 0 ;
+}
+.arpw-title {
+	color: #000;
+}
+.tptn_posts_list_widget{
+	overflow:hidden;
+}
+.tptn_posts_widget ul{
+	list-style:none;
+	height:80px;
+	padding:0px;
+	margin:0;
+}
+.tptn_posts_widget ul li{
+	list-style:none;
+	padding:0px;
+	height:80px;
+	line-height: 20px;
+	margin:15px 0 15px 0;
+}
+img.tptn_thumb {
+	display:block;
+	float:left;
+	clear:left;
+	margin-right:10px !important;
+	padding:0px !important;
+	border:none;
+	vertical-align: bottom;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0);
+	-moz-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.tptn_after_thumb .tptn_link{
+	padding:0px;
+	height:80px;
+}
+
+.tptn_posts_widget a{
+	padding:0;
+	color: #000;
+	font-weight: 600;
+	font-size: 16px;
+	line-height:16px;
+}
+#recent-posts-widget-with-thumbnails-2 li{
+	margin:0 0 0 0 !important;
+}
+.recent-posts-widget-with-thumbnails{
+	margin-bottom:20px;
+}
+.recent-posts-widget-with-thumbnails img{
+	margin:0px 10px 15px 0px !important;
+}
+.rpwwt-widget {
+	margin:0 0 0 0;
+}
+.rpwwt-widget ul { 
+	list-style: outside none none; 
+	margin: 0 0 0 0; 
+	padding-left: 0; 
+	padding-right: 0; 
+}
+.rpwwt-widget a{
+	padding:0;
+	margin:0 0 0 0;
+	color: #000;
+	font-weight: 600;
+	font-size: 16px;
+	line-height:16px;
+}
+.rpwwt-post-date{  
+	line-height:12px;
+	padding-top:10px;
+	margin: 0 0 0 0; 
+}
+.rpwwt-widget ul li { 
+	overflow: hidden; 
+	line-height:12px;
+	padding:0px;
+	margin: 0px 0px 0px 0px; 
+}
+.rpwwt-widget ul li img { 
+	display: inline;
+	float: left; 
+	margin: 0px 0px 10px 0px; 
+}
+.widget-area a{
+	color: #000;
+}
+.newsletter-form-container{
+	width:100%;
+	padding-right: 45px;
+	padding-bottom: 20px;
+	position: relative;
+}
+.newsletter-form-entry{
+	width:86%;
+	float:left;
+}
+.newsletter-form-button{
+	width:14%;
+	padding-top:1px;
+	float:right;
+}
+
+.comments-icon a::before{
+    color: #9f9f9f;
+    content: "\f075";
+    font-family: "FontAwesome";
+	style:regular;
+    font-size: 14px;
+    position: relative;
+	padding-right: 5px;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.widget_archive a::before{
+    color: #9f9f9f;
+    content: "\f142";
+    font-family: "FontAwesome";
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+input[type=submit]{
+	background: #000;
+}
+.book-one{
+	width: 50%;
+	float: left;
+	padding: 0px 5px 15px 0px;
+	}
+.book-two{
+	width: 50%;
+	float: right;
+	padding: 0px 0px 15px 5px;
+	}
+/* -----------------------------------------
+   Pagination
+----------------------------------------- */
+.pagination-container{
+	width:100%;
+	position:relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height:50px;	
+	overflow: hidden;
+}
+
+.page-numbers {
+    height: 50px;
+	text-align: center;	
+}
+
+.page-numbers li {
+    float: none;
+    font-size: 16px;
+	padding:0 10px 0 10px;
+	text-align: center;
+	display: inline-block;
+}
+
+.page-numbers li a {
+	color: #777;
+	font-size: 16px;
+    margin-right: 5px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.page-numbers li:hover a,
+.page-numbers li a:focus {
+   color: #999;
+}
+
+.page-numbers li.current a {
+	color: #000000;
+    font-weight: bold;
+}
+
+.page-numbers li.current a:hover,
+.page-numbers li.current a:focus {
+}
+
+.page-numbers.current { 
+	font-size: 16px;
+    border-radius: 5px;
+    margin-right: 5px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.pagination-centered {
+    text-align: center;
+	display: inline-block;
+}
+
+.pagination-centered ul>li {
+    float: none;
+    display: inline-block;
+}
+/* --------------------------------------------------------
+   Grid Display
+-------------------------------------------------------- */
+.grid-container{
+  	width: 100%;
+	overflow:hidden;
+}
+.grid {
+  	background: #fff;
+ 	max-width: 1280px;
+	overflow:hidden;
+}
+.grid-item-meta-text a{
+	color: #fff;
+}
+.grid-item-meta-text a:hover{
+	color: #fff;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+	
+}
+.grid-link{
+	width:100%;
+	height:100%;
+	display:block;
+	width:100%;
+	position: absolute;
+	padding: 0px 0px 0px 0px;
+	opacity:.3;
+  	bottom: 0px;
+	overflow: hidden;
+}
+.grid-links{
+	width:100%;
+	height:100%;
+	display:block;
+	width:100%;
+	position: absolute;
+	padding: 0px 0px 0px 0px;
+	opacity:.9;
+  	bottom: 0px;
+	overflow: hidden;
+}
+.photolink {
+  	float: left;
+	width:100%;
+	height:100%;
+	bottom:0px;
+}
+
+.grid-overlay {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+ 	background-size: cover;
+	background-position:center center;
+	background-repeat: no-repeat; 
+   
+}
+.grid-overlay:hover {
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+	
+}
+.grid-item {
+ 	width: 25%;
+	background-size: 100%;
+ 	float: left;
+	
+}
+.grid-item--width2 { 
+	width:  50%; 
+	height:330px;
+	background-size: 100%;
+}
+.grid--item-meta--width2 {
+    height: 380px;
+    background: rgba(0, 0, 0, 0.1);
+	position: relative;
+	padding:0 0 0 0;
+	
+}
+.grid--item-meta--width2:hover {
+    background: rgba(0, 0, 0, 0.0);
+}
+.grid--item-meta {
+    height: 185px;
+    background: rgba(0, 0, 0, 0.1);
+	position: relative;
+	padding:0 0 0 0;
+}
+.grid--item-meta:hover {
+    background: rgba(0, 0, 0, 0.0);
+}
+.grid-item-meta-text {
+	width:100%;
+	position: absolute;
+	padding: 25px 0px 0px 0px;
+	margin:0;
+	background: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/overlay_shadowbox_.png);
+  	bottom: 0px;
+}
+.grid-item-meta-text h3{
+	width:100%;
+	opacity:1;
+}
+.grid-post {
+    padding: 5px;
+	list-style-type: none;
+	
+}
+.grid-featured-title {
+		width:100%;
+    	font-size: 22px;
+		line-height:28px;
+   		padding: 5px 10px 5px 10px;
+    	bottom: 0px;	
+		margin:0px;
+}
+.grid-featured-title  a {
+    	color: #fff;
+		opacity: 1;
+}
+.grid-post-title {
+		width:100%;
+    	font-size: 16px;
+		line-height:18px;
+   		padding: 5px 10px 5px 10px;
+    	bottom: 0px;	
+		margin:0px;
+}
+.grid-post-title  a {
+    	color: #fff;
+		opacity: 1;
+}
+.grid-post-subtitle {
+		width:100%;
+		max-height:0px;
+    	color: #fff;
+		font-size: 12px;
+	 	line-height:14px;
+		padding:0px 5px 0px 5px;
+    	bottom: 0px;
+}
+.grid-post .grid-post-meta {
+    background-color: transparent;
+    border-radius: 0px 0px 6px 6px;
+    min-height: 50px;
+	padding-top: 10px;
+}
+.wp-post-image.no-img {
+    width: 100%;
+    max-height: 235px;
+}
+span.grid-count {
+    padding: 17px 10px;
+    min-width: 118px;
+    text-align: center;
+    float: right;
+    border-radius: 0px 0px 6px 0px;
+    line-height: 11px;
+    min-height: 50px;
+    background: #6772e5;
+    color: #fff;
+    font-size: 12px;
+}
+span.grid-count i {
+	padding-right:5px;
+}
+span.grid-cat {
+    padding: 0px 0px 0px 10px;
+    float: left;
+    line-height: 10px;
+}
+.grid-cat a {
+    color: #fff;
+    margin: 0px 0px;
+    padding: 1px 0px;
+    font-size: 10px;
+	line-height: 10px;
+	text-transform: uppercase;
+}
+
+.grid-cat a:hover, .tags a:hover {
+    background: rgba(0, 0, 0, 0.48);
+    color: #ffffff;
+}
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+#top-footer {
+    background: #fff;
+	border-top: solid;
+	border-width: 3px;
+	border-color: #ddd;	
+	color: #888;
+	padding-top:30px;
+	margin-top:0px;
+}
+#top-footer .widget-title{
+	color: #888;
+}
+#top-footer .footer-links a{
+	color: #888;
+	font-size:12px;
+	text-transform: uppercase;
+}
+.footer-text{
+	color: #888;
+	font-size:12px;
+	
+}
+.widget-title {
+	padding:0px;
+	margin-bottom:10px;
+}
+.site-info {
+	
+}
+.np-post-meta {
+	display:none;
+}
+.sep {
+	display:none;
+}
+.bottom-footer{
+ background: #000;
+}
+#colophon {
+    margin-top: 0px;
+}
+/*--------------------- CSS Social Media Sprites ----------------------*/
+#np-scrollup{
+	background-color:#777;
+}
+
+.social-small-icons{
+   	list-style: none;
+	
+}
+.social-small-icons ul{
+	margin: 0;
+}
+.social-small-icons li{
+	list-style: none;
+	display: inline-block;
+}
+#social-small-facebook {
+        background: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png) 0px -28px no-repeat;
+        height:22px;
+    	width: 22px;
+         left: 0px;
+		float: right; 
+	transition: opacity 0.5s;
+    }
+#social-small-facebook:hover {
+		height:22px;
+    	width: 22px;
+         left: 0px;
+		float: right;
+        background: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png) 0 -54px  no-repeat;     
+	transition: opacity 0.5s;
+        } 
+
+
+#social-small-twitter{
+    left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	background-position: 276px -28px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png);
+	transition: opacity 0.5s;
+}
+#social-small-twitter:hover {
+    background-image: url('http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png');
+	left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	z-index:200;
+	background-position: 276px -54px;
+        transition: opacity 0.5s;
+}
+#social-small-linkedin{
+    left: 0px;
+	height: 22px;
+    width: 30px;
+	float: right;
+	background-position: 60px -28px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png);
+	transition: opacity 0.5s;
+}
+#social-small-linkedin:hover {
+    background-image: url('http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png');
+	left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	z-index:200;
+	background-position: 60px -54px;
+        transition: opacity 0.5s;
+}
+#social-small-google{
+    left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	background-position: 123px -28px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png);
+	transition: opacity 0.5s;
+}
+#social-small-google:hover {
+	left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	z-index:200;
+	background-position: 123px -54px;
+	background-image: url('http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png');
+    transition: opacity 0.5s;
+}
+#social-small-rss{
+    left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	background-position: 185px -28px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png);
+	transition: opacity 0.5s;
+}
+#social-small-rss:hover {
+	left: 0px;
+	height:22px;
+    width: 30px;
+	float: right;
+	z-index:200;
+	background-position: 185px -54px;
+	background-image: url('http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/04/social_icons_wbg.png');
+    transition: opacity 0.5s;
+}
+.social-float{
+    position: fixed;
+	float: right;
+	list-style: none;
+	width: 45px;
+	right:17px;
+	bottom:160px;	
+}
+.social-float li{
+	list-style: none;
+}
+#social-facebook{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 435px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-twitter{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 386px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-linkedin{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 191px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-googleplus{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 289px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-email{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 240px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-instagram{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 142px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-youtube{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 45px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#social-rss{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 94px -4px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+
+
+#author-social-facebook{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 435px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-twitter{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 386px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-linkedin{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 191px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-googleplus{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 289px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-email{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 240px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-instagram{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 142px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-youtube{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 45px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+#author-social-rss{
+    left: 0px;
+	height:40px;
+    width: 45px;
+	float: right;
+	background-position: 94px -184px;
+	background-image: url(http://www.sportsbroadcastjournal.com/wp-content/uploads/2018/05/enfuzed_social_icons_css_sprites.png);
+}
+/*--------------------------------------------------------------
+Responsive Media Query
+--------------------------------------------------------------*/
+@media screen and ( max-width: 1300px ) {
+.social-float{
+    display: none;
+}
+}
+
+@media screen and ( max-width: 922px ) {
+.grid-item {
+    width: 50%;
+	height:200px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta {
+	width: 100%;
+    height: 200px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid-item--width2 {
+    width: 100%;
+	height:450px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta--width2 {
+	height: 450px;
+}
+.grid-item-meta-text {
+	padding: 0px 0px 5px 0px;
+}
+.np-home-middle-section .middle-primary,
+.np-home-middle-section .middle-aside {
+        float: none;
+        width: 100%;
+    }
+#primary,
+    .home.blog #primary,
+    #secondary,
+    .home.blog #secondary {
+        float: none;
+		padding: 0 0 0 0;
+        width: 100%;
+    }
+.primary_image_container{
+	position: relative;
+  	float:left;
+	width: 32%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+.primary_excerpt_container{
+	position: relative;
+    float:right;
+	min-height: 160px;
+	max-height:180px;
+	margin:0 0 0 0;
+	width:68%;
+	padding:0 10px 0 20px;
+}
+.lightbox--item-meta {
+    min-height: 120px;
+    max-height: 150px;
+	position: relative;
+	padding:0 0 0 0;
+}
+.sidebar-posts-container{
+	width:50%;
+}
+.sidebar-thumbs-lightbox-overlay{
+	width:100%;
+	height:200px;
+}
+.sidebar-thumbs-lightbox--item-meta {
+	width:100%;
+	height: 200px;
+}
+.article-content{
+	padding: 0 0px 0px 0px;
+}
+.arpw-random-post{
+	width:50%;
+	padding:0px 0px 0px 0px;
+}
+}
+
+@media screen and ( max-width: 780px ) {
+.grid-item {
+    width: 50%;
+	height:200px;
+	float:right;
+}
+.grid--item-meta {
+	width: 100%;
+	height:200px;
+    margin-bottom: 10px;
+	padding-bottom: 10px;
+	overflow:hidden;
+}
+.grid-item--width2 {
+    width: 100%;
+	height:400px;
+	 margin-bottom: 10px;
+}
+.grid--item-meta--width2 {
+   	width:100%;	
+	height:400px;
+    margin-bottom: 10px;
+	padding-bottom: 10px;
+	overflow:hidden;
+}
+.grid-overlay {
+    background-size: cover;
+}
+.grid-overlay:hover {
+    background-size: cover;
+}
+.grid-item-meta-text {
+	padding: 25px 0px 5px 0px;
+}
+.primary_excerpt_container{	 
+	min-height:180px;
+	max-height:210px;
+}
+.pagination-container{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height:60px;	
+	overflow: hidden;
+}
+.page-numbers {
+    height: 50px;
+	text-align: center;	
+}
+#all-content-wrapper{
+	background: #fff;
+	width:100%;
+	padding: 20px 0px 20px 0px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+#primary.content-area{
+	padding: 0 20px 0 20px;
+}
+.arpw-random-post{
+	width:50%;
+	padding:0px 0px 0px 0px;
+}
+.category-posts-container {
+	width:50%;		
+	}
+.sidebar-posts-container{
+	width:50%;
+}
+.sidebar-thumbs-lightbox-overlay{
+	width:100%;
+	height:200px;
+}
+.sidebar-thumbs-lightbox--item-meta {
+	width:100%;
+	height: 200px;
+}
+}
+@media screen and ( max-width: 600px ) {
+.grid-item {
+    width: 100%;
+	height:300px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta {
+	width: 100%;
+    height: 300px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid-item--width2 {
+    width: 100%;
+	height:300px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta--width2 {
+	width: 100%;
+    height: 300px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid-featured-title {
+	width:100%;
+    font-size: 16px;
+	line-height:18px;
+   	padding: 5px 10px 5px 10px;
+    bottom: 0px;	
+	margin:0px;
+}
+.home #primary.content-area{
+	width:100%;
+	padding: 0px 0px 0px 0px;
+}
+.page .entry-content{
+	padding: 0 0px 0px 0px;
+}
+#primary.content-area{
+	width:100%;
+	padding: 0px 0px 0px 0px;
+}
+.primary_post_container{
+	width:100%;
+	padding: 10px 0 10px 0;
+	overflow:hidden;
+}
+.primary_image_container{
+	width: 100%;
+	float: none;
+	padding-bottom: 5px;
+
+}
+.lightbox-overlay {
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat; 
+	height:300px;
+}
+.lightbox--item-meta {
+    min-height: 100%;
+	position: relative;
+	padding:0 0 0 0;
+}
+.primary_excerpt_container{	 
+	width: 100%;
+	padding: 0 0 0 0;
+	min-height:150px;
+	max-height:180px;
+	float: none;
+}
+.sidebar-posts-container{
+	width:100%;
+}
+.sidebar-thumbs-lightbox-overlay{
+	width:100%;
+	height:250px;
+}
+.sidebar-thumbs-lightbox--item-meta {
+	width:100%;
+	height: 250px;
+}
+.custom-recommended-posts{
+	height:550px;
+}
+.custom-recommended-posts li{
+	width:100%;
+	float:none;
+	font-size:14px;
+	line-height: 22px;
+	padding: 0px 20px 0px 20px;
+	list-style: none;
+	padding: 0 0px 0 0px;
+	vertical-align: text-bottom;
+}
+.author-box{
+	padding: 3% 2% 3% 2%;
+	display: inline-block;
+	overflow:auto;
+	width:100%;
+}
+.author-avatar{
+	float: left;
+	width:30%;
+	}
+.author-avatar img{
+	width:82%;
+	}
+.author-description{
+	float: right;
+	width:70%;
+	}
+.np-single-post img{
+	height:300px;
+	width: 100%;
+	object-fit: cover;
+	}
+
+}
+@media screen and ( max-width: 500px ) {
+.grid-item {
+    width: 100%;
+	height:250px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta {
+	width: 100%;
+	height: 250px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid-item--width2 {
+    width: 100%;
+	height:250px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta--width2 {
+	width: 100%;
+	height: 250px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid-post-title {
+	width:100%;
+   	font-size: 14px;
+	line-height:16px;
+    padding: 0px 5px 5px 5px;
+    bottom: 0px;
+	margin:0px;
+}
+.grid-item-meta-text h3{
+	width:100%;
+}
+.grid-item-meta-text {
+	padding: 25px 0px 5px 0px;
+}
+span.grid-cat {
+    padding: 0px 0px 0px 5px;
+    float: left;
+    line-height: 10px;
+}
+.lightbox-overlay {
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat; 
+	height:250px;
+}
+.lightbox--item-meta {
+    min-height: 100%;
+	position: relative;
+	padding:0 0 0 0;
+}	
+.primary_excerpt_container{
+	position: relative;
+	min-height:160px;
+	max-height:200px;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+.sidebar-posts-container{
+	width:100%;
+}
+.sidebar-thumbs-lightbox-overlay{
+	width:100%;
+	height:200px;
+}
+.sidebar-thumbs-lightbox--item-meta {
+	width:100%;
+	height: 200px;
+}
+.np-single-post img{
+	height:210px;
+	width: 100%;
+	object-fit: cover;
+	}
+.related-posts-wrapper li{
+	position: relative;
+	list-style:none;
+	width:100%;
+	margin:0 0 0 0;
+	padding:0 0px 0 0px;
+	float:none;
+}
+.arpw-random-post {
+	width:100%;
+	padding:0px 0px 0px 0px;
+}
+article.hentry h1.entry-title {
+	font-weight: 700;
+	color: #000;
+    margin-bottom: 5px;
+    line-height: 34px;
+	font-size: 28px;
+}
+h2.entry-title{
+	margin-bottom: 5px;
+	font-size: 22px;
+	line-height: 24px;
+	color: #000;
+}
+.category-posts-container {
+	width:100%;		
+}
+}
+@media screen and ( max-width: 320px ) {
+.grid-item {
+    width: 100%;
+	height:200px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta {
+	width: 100%;
+	min-height: 200px;
+    height: 200px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid-item--width2 {
+    width: 100%;
+	height:200px;
+    margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+}
+.grid--item-meta--width2 {
+	width: 100%;
+	height: 200px;
+	margin-bottom: 5px;
+	padding:0 0 0 0;
+	overflow:hidden;
+	}
+.grid-item-meta-text h3{
+	width:100%;
+	margin-bottom: 5px;
+}
+.grid-post {
+	list-style-type: none;
+}
+.grid-item-meta-text {
+	padding: 20px 0px 3px 0px;
+}
+.grid-featured-title {
+	width:100%;
+   	font-size: 14px;
+	line-height:16px;
+    padding: 0px 5px 0px 5px;
+    bottom: 0px;
+	margin:0px;
+}
+.grid-post-title {
+	width:100%;
+   	font-size: 14px;
+	line-height:16px;
+    padding: 0px 5px 0px 5px;
+    bottom: 0px;
+	margin:0px;
+}
+.grid-post-title a {
+    color: #fff;
+	opacity: 1;
+}
+.grid-post-subtitle {
+	width:100%;
+	max-height:0px;
+    color: #fff;
+	font-size: 10px;
+	line-height:12px;
+	padding:0px 5px 0px 5px;
+    bottom: 0px;
+}
+.lightbox-overlay {
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat; 
+	height:200px;
+}
+.lightbox--item-meta {
+    min-height: 100%;
+	position: relative;
+	padding:0 0 0 0;
+}
+.primary_excerpt_container{
+	position: relative;
+	min-height:100px;
+	max-height:300px;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+.sidebar-posts-container{
+	width:100%;
+}
+.sidebar-thumbs-lightbox-overlay{
+	width:100%;
+	height:160px;
+}
+.sidebar-thumbs-lightbox--item-meta {
+	width:100%;
+	height: 160px;
+}
+.author-box{
+	padding: 3% 2% 3% 2%;
+	display: inline-block;
+	overflow:auto;
+	width:100%;
+}
+.author-avatar{
+	float: left;
+	width:35%;
+	}
+.author-avatar img{
+	width:90%;
+	}
+.author-description{
+	float: right;
+	width:65%;
+	}
+.np-single-post img{
+	height:160px;
+	width: 100%;
+	object-fit: cover;
+	}
+
+}
