@@ -2,9 +2,8 @@
 
 <em>Note: To enable the full Error Log, enable Debug options in the wp-config file via FTP.</em>
 
-- *4/14/18*- The posts should not duplicate.  This can only be done if the plugins are removed and substituted to go in the main loop as a multiple pass loop.
-- *4/14/18*- The related posts encounter a bug if more than 3 are displayed.  Instead of floating to the left, the containers sometimes do not load correctly in a straight line.  This is likely caused by the different lengths of titles, that can range from 1-3 lines.  Setting a height for the container and using inline-block constraints might fix this.
-- *4/14/18*- Instead of using responsive images that can get squished or stretched, it would be better to set a definite aspect ratio width using the background-size:contain.  Most websites seem to do this instead of squishing images, even though it does not always conform well to responsive layout on mobile.
+- *4/14/18*- The posts should not duplicate.  This can only be done if the plugins are removed and substituted to go in the main loop.
+- *4/14/18*- The related posts encounter a bug if more than 3 are displayed.  Instead of floating to the left, the containers sometimes do not load correctly in a straight line.  This is likely caused by the different lengths of titles, that can range from 1-3 lines.  Setting a height for the container and using inline-block constraints might fix this.  Use a wrapper div with overlay:hidden to fix.
 
 ## Theme Status:
 
@@ -30,6 +29,7 @@
 
 ## Resolved:
 
+- *5/21/18*- Responsive images set to proportionally scale aspect ratio.  Fix involved using a hack that takes advantage of the fact that padding percentages are calculated relative to element width.  Setting a 56% padding with 100% width and height will lock the aspect ratio and scale without deformation or squashing.  The background image still needs a link overlay to be applied by wrapping the image in the overlay container.
 - *5/20/18*- Added Facebook Like JS to header and single post
 - *5/11/18*- A 302 Temporary Redirect chain appeared, adding a string to a stylesheet.css file.  The root of the issue was traced back to the header.php file.  The href link needed to be changed to point to the entire root of the style.css directory.
 - *4/30/18*- The text overlay was causing the bottom portion of the permalink overlay on the grid images to become unselectable, due to the linked div using position:block.  Copying the div with the permalink again after the text div seems to cover the entire photo with a link overlay. 
