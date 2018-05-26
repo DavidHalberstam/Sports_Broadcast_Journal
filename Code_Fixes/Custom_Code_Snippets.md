@@ -166,6 +166,16 @@ Insert this code to add author byline and date to grid posts
 
     <h6 class="grid-post-subtitle"><?php _e('By', 'news portal' );?> <?php The_author_posts_link(); ?> &nbsp &nbsp <span class="entry-date"><?php echo get_the_date(); ?></span></h6>	
     
+Insert this code when using the Co-Authors Plus Plugin for multiple authors byline to display 
+    
+    <?php if ( function_exists( 'coauthors_posts_links' ) ) { ?>
+	
+	<?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php coauthors_posts_links(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+    <?php   
+    } else { ?>
+    		<?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php the_author_posts_link(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+    <?php } ?>
+    
 Use this code to add category filter option to WP Customizer options
 
     $wp_customize->add_setting(
