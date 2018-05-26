@@ -29,6 +29,7 @@
 
 ## Resolved:
 
+- *5/26/18*- The comments plugin adds a padded div with JavaScript beneath the footer.  The padding should be set to 0 with !important to override the settings.
 - *5/21/18*- Responsive images set to proportionally scale aspect ratio.  Fix involved using a hack that takes advantage of the fact that padding percentages are calculated relative to element width.  Setting a 56% padding with 100% width and height will lock the aspect ratio and scale without deformation or squashing.  The background image still needs a link overlay to be applied by wrapping the image in the overlay container.
 - *5/20/18*- Added Facebook Like JS to header and single post
 - *5/11/18*- A 302 Temporary Redirect chain appeared, adding a string to a stylesheet.css file.  The root of the issue was traced back to the header.php file.  The href link needed to be changed to point to the entire root of the style.css directory.
