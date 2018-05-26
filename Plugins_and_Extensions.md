@@ -13,6 +13,7 @@
 - TablePress
 - Contact Form 7
 - WP User Avatar
+- Co-Authors Plus
 
 # Security Plugins
 - Wordfence
