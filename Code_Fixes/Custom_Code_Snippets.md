@@ -201,3 +201,25 @@ Use this code to add category filter option to WP Customizer options
             )
 			))
     );
+
+This code was removed from the .htaccess file for sportsannouncersreportcard.com
+
+    AddHandler phpCGI .xml .php
+    Action phpCGI /cgi-bin/php5.6fcgi
+    # for php5 and securewebexchange
+    <IfDefine SSL>
+    AddHandler phpCGI .xml .php
+    Action phpCGI https://securec45.securewebsession.com/sportsannouncersreportcard.com/cgi-bin/php5.6fcgi
+    </IfDefine>
+    ###### webforce begin ######
+    DirectoryIndex index.html index.php /hproxy.php
+
+    SetEnv PROXYSERVER https://wfsites.websitecreatorprotool.com
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^hproxy.php
+    RewriteRule ^(.*)$ /hproxy.php/$1 [L,NC,QSA]
+    ###### webforce end ######
