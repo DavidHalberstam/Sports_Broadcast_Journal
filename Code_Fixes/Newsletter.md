@@ -21,6 +21,10 @@ MailChimp RSS Feed Tags
     *|FEEDITEM:SHARE:Facebook,Twitter,Digg|*<br><br>
 
     *|END:FEEDITEMS|*  
+    
+  Add this code to Yoast SEO RSS to prevent skimming of articles and ensure the original site is credited
+  
+      - via %%BLOGLINK%%.
        
  Send images to RSS in functions.php
  
