@@ -8,6 +8,7 @@
 ## Theme Status:
 
 - The child theme has some minor wp translation issues that need to be cleaned up via search and replace
+- Both sports-announcers and sportsannouncersreportcard redirect to sportsbroadcastjournal
 - www.sports-announcers.com is verified with Google Webmasters for both http and https versions of the site.  www.sportsbroadcastjournal needs to a ssl certificate before it can be moved to https
 
 ## Database Maintenance and Backups:
@@ -29,6 +30,7 @@
 
 ## Resolved:
 
+- *5/31/18*- www.sportsannouncersreportcard.com migrated and redirected to sportsbroadcastjournal.  A SSL certificate was required to redirect link juice from all the https:// backlinks.  After some initial difficulty with configuring the .htaccess file to redirect individual posts, a minor error was discovered where one redirect link did not have http:// in front of it.
 - *5/26/18*- The comments plugin adds a padded div with JavaScript beneath the footer.  The padding should be set to 0 with !important to override the settings.
 - *5/21/18*- Responsive images set to proportionally scale aspect ratio.  Fix involved using a hack that takes advantage of the fact that padding percentages are calculated relative to element width.  Setting a 56% padding with 100% width and height will lock the aspect ratio and scale without deformation or squashing.  The background image still needs a link overlay to be applied by wrapping the image in the overlay container.
 - *5/20/18*- Added Facebook Like JS to header and single post
