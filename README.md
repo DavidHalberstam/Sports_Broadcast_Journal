@@ -4,19 +4,24 @@ Website for Sports Announcer News
 # Domains
 http://www.sportsbroadcastjournal.com/
 - Primary Domain
+- WordPress 
 
 https://www.sports-announcers.com/ 
 - (301 redirect in .htaccess)
 - SSL certificate by Comodo (valid through 2019)
 - WHOIS information is public for SSL verification purposes
+- WordPress 
 
 https://www.sportsannouncersreportcard.com/
-- (Weebly Hosting)
+- (301 redirect in .htaccess)
+- SSL certificate by NameCheap/Comodo (valid through 2019)
+- WordPress 
 
 ## Hosting:
 - AT&T Web Hosting (shared service) 2018
 - IP 216.55.149.9
 - FTP compatible
+- Apache Server
 
 ## Database:
 - Database: Carrierzone
