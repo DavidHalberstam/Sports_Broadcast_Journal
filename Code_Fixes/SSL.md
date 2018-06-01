@@ -8,8 +8,15 @@ Force SSL.  Place after End WordPress
     RewriteCond %{HTTP_HOST} ^sportsannouncersreportcard\.com$ [OR]
     RewriteCond %{HTTP_HOST} ^www\.sportsannouncersreportcard\.com$
     RewriteRule ^(.*)$ https://www.sportsannouncersreportcard.com/$1 [R,L]
+    
+Redirect homepage only in .htaccess
+    
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} mysite\.com [NC]
+    RewriteCond %{REQUEST_URI} ^/$
+    Rewriterule ^(.*)$ http://mysecondsite.com/ [L,R=301]
 
-Unknown code for sportsannouncersreportcard.com
+Unknown throwaway code for sportsannouncersreportcard.com
 
     AddHandler phpCGI .xml .php
     Action phpCGI /cgi-bin/php5.6fcgi
@@ -77,7 +84,7 @@ Redirects
     Redirect 301 /blog/play-by-play-streaming-a-wild-west-frontier-announcers-needed http://www.sportsbroadcastjournal.com/play-by-play-streaming-announcers-needed/
     Redirect 301 /blog/a-candid-al-jaffe-talks-espn-talent-and-the-networks-future http://www.sportsbroadcastjournal.com/al-jaffe-talks-espn-talent/
     Redirect 301 /blog/a-lifetimes-lesson-in-a-single-session-with-marty-glickman http://www.sportsbroadcastjournal.com/meeting-marty-glickman/
-    Redirect 301 /blog/hollywood-writer-and-sports-announcer-ken-levine-reviews-coverage-of-super-bowl-lii www.sportsbroadcastjournal.com/as-i-see-it-coverage-of-the-2018-super-bowl/
+    Redirect 301 /blog/hollywood-writer-and-sports-announcer-ken-levine-reviews-coverage-of-super-bowl-lii http://www.sportsbroadcastjournal.com/as-i-see-it-coverage-of-the-2018-super-bowl/
     Redirect 301 /blog/halbys-morsels-and-jottings-random-notes-and-observations-from-the-recent-sportscasting-past http://www.sportsbroadcastjournal.com/halbys-jottings-recent-sportscasting-news/
     Redirect 301 /blog/rich-eisen-the-face-of-nfl-network http://www.sportsbroadcastjournal.com/rich-eisen-the-face-of-nfl-network/
     Redirect 301 /blog/classic-jim-cramer-on-sports-broadcasting http://www.sportsbroadcastjournal.com/jim-cramer-sports-broadcasting/
