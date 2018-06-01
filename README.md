@@ -83,3 +83,4 @@ https://www.sportsannouncersreportcard.com/
 - Google Mobile Friendly Test
 - Why No Padlock
 - Redirect Detective
+- Redirect Check
