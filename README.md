@@ -1,11 +1,12 @@
 # Sports_Broadcast_Journal
 Website for Sports Announcer News
 
-# Domains
+## Domains
 http://www.sportsbroadcastjournal.com/
 - Primary Domain
 - WordPress 
 
+## Sub Accounts
 https://www.sports-announcers.com/ 
 - (301 redirect in .htaccess)
 - SSL certificate by Comodo (valid through 2019)
