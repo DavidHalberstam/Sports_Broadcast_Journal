@@ -11,6 +11,8 @@ http://www.sportsbroadcastjournal.com/
 - WordPress 
 
 ## Sub Accounts
+*Redirected domains still need to update plugins and themes periodically via the wp-admin login*
+
 https://www.sportsannouncersreportcard.com/
 - (301 redirect in .htaccess)
 - SSL certificate by NameCheap/Comodo (valid through 2019)
