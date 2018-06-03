@@ -32,16 +32,17 @@ $cat_query = new WP_Query('category_name=featured&posts_per_page=5');
 if ( have_posts() ) :
 while ($cat_query->have_posts()) : $cat_query->the_post(); // start second loop
 ?>
+	<div class="lightbox-img-wrapper" >
+<div class="sidebar-thumbs-lightbox-overlay-links">
+			
+<div class="sidebar-thumbs-lightbox-image" style = "background-image: url('<?php the_post_thumbnail_url( 'medium_large' ); ?>');">
 
-
-<div class="sidebar-thumbs-lightbox-overlay" style = "background-image: url('<?php the_post_thumbnail_url( 'medium_large' ); ?>');">
-<div class="sidebar-thumbs-lightbox--item-meta">
-	
 			<div class="sidebar-thumbs-lightbox-links">
 			<a class="sidebar-thumbs-lightbox-link" href="<?php the_permalink(); ?>" ></a>
 			</div>				
 </div>		
 </div>
+	</div>
 
 	<!-- .np-article-thumb -->
 <h4 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'news portal' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php  echo wp_trim_words( get_the_title(), 20, '...' ); ?></a>

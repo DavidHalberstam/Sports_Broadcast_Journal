@@ -30,12 +30,14 @@ require get_stylesheet_directory() . '/inc/hooks/np-header-hooks.php';
 require get_stylesheet_directory() . '/inc/hooks/np-footer-hooks.php';
 require get_stylesheet_directory() . '/inc/hooks/np-custom-hooks.php';
 
-
 /*--Don't record IP address of comments- this should be a temporary setting--*/
 function wpb_remove_commentsip( $comment_author_ip ) {
 return '';
 }
 add_filter( 'pre_comment_user_ip', 'wpb_remove_commentsip' );
+
+/*--Stop sending annoying email notices for user password changes--*/
+add_filter( 'send_email_change_email', '__return_false' );
 
 /*-- WARNING: using Redux framework causes the editor to stop working.  
  * It can be used to quickly change the settings of the grid and offset quickly, and has no adverse effects 
@@ -49,6 +51,7 @@ Until this can be fixed, the redux config.php can be used to control the grid se
 or they can be manually changed in the functions.php and index.php--*/
  require get_stylesheet_directory() . '/inc/customizer-extension/customizer.php';
  
+
 /*--Offset Pre_Get_Posts pagination fix--*/
 add_action('pre_get_posts', 'myprefix_query_offset', 1 );
 function myprefix_query_offset(&$query) {

@@ -9,9 +9,9 @@
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
 	<div class="primary_image_container">
+<div class="lightbox-overlay-links">
+<div class="lightbox-background-image" style = "background-image: url('<?php the_post_thumbnail_url( 'medium_large' ); ?>');">
 
-<div class="lightbox-overlay" style = "background-image: url('<?php the_post_thumbnail_url( 'medium_large' ); ?>');">
-<div class="lightbox--item-meta">
 	
 			<div class="lightbox-links">
 			<a class="lightbox-link" href="<?php the_permalink(); ?>" ></a>
@@ -40,7 +40,14 @@
 			if ( 'post' === get_post_type() ) :
 		?>
 				<div class="entry-meta">
-					<h6><?php _e('By', 'news-portal' );?> <?php The_author_posts_link(); ?><span>&nbsp</span><?php echo apply_filters( 'the_date', get_the_date(), get_option( 'date_format' ), '', '' ); ?><span>&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span></h6>
+					<h6 class="single-author-slug">
+			<?php if ( function_exists( 'coauthors_posts_links' ) ) { ?>						
+<?php _e('By', 'news-portal' );?> <?php coauthors_posts_links(); ?><span>&nbsp</span><?php echo apply_filters( 'the_date', get_the_date(), get_option( 'date_format' ), '', '' ); ?><span>&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>						
+<?php   
+} else { ?>
+    		<?php _e('By', 'news-portal' );?> <?php The_author_posts_link(); ?><span>&nbsp</span><?php echo apply_filters( 'the_date', get_the_date(), get_option( 'date_format' ), '', '' ); ?><span>&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+<?php } ?>		
+	</h6>
 					
 					
 				</div><!-- .entry-meta -->

@@ -23,7 +23,16 @@
 		<h2 class="entry-subtitle"> <?php echo get_secondary_title(); 
 		?></h2>
 		<div class="single-post-entry-meta">
-			<h6 class="single-author-slug"><?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php The_author_posts_link(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span></h6>
+			<h6 class="single-author-slug">
+			<?php if ( function_exists( 'coauthors_posts_links' ) ) { ?>
+	
+	<?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php coauthors_posts_links(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+<?php   
+} else { ?>
+    		<?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php the_author_posts_link(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+<?php } ?>
+			
+	</h6>
 				</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 	
@@ -53,6 +62,7 @@ the_post_thumbnail('full');
 				get_the_title()
 				
 			) ); ?>
+
 			<?php wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'news-portal' ),
 				'after'  => '</div>',
@@ -61,7 +71,7 @@ the_post_thumbnail('full');
 		<!-- Facebook Like Button -->
 		<div class="fb-like" data-href="http://www.sportsbroadcastjournal.com/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 	</div><!-- .entry-content -->
-
+	
 	<footer class="entry-footer">
 		
 		<?php news_portal_entry_footer(); 

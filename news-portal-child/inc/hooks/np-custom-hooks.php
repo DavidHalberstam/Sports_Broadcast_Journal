@@ -67,15 +67,17 @@ if( ! function_exists( 'news_portal_related_posts_section' ) ) :
 	?>
 <ul>
 	<li>
+<div class="related-posts-image-wrapper">
 
 <div class="related-posts-lightbox-overlay" style = "background-image: url('<?php the_post_thumbnail_url( 'medium_large' ); ?>');">
-<div class="related-posts-lightbox--item-meta">
-	
+
+	<div class="related-posts-lightbox--item-meta">
 			<div class="related-posts-lightbox-links">
 			<a class="related-posts-lightbox-link" href="<?php the_permalink(); ?>" ></a>
 			</div>				
 </div>		
-</div>				
+</div>	
+	</div>	
 			
 					<div class="np-post-content">
 						<h3 class="np-post-title small-size"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
