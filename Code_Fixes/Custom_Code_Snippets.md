@@ -166,6 +166,16 @@ Insert this code to add author byline and date to grid posts
 
     <h6 class="grid-post-subtitle"><?php _e('By', 'news portal' );?> <?php The_author_posts_link(); ?> &nbsp &nbsp <span class="entry-date"><?php echo get_the_date(); ?></span></h6>	
     
+Insert this code when using the Co-Authors Plus Plugin for multiple authors byline to display 
+    
+    <?php if ( function_exists( 'coauthors_posts_links' ) ) { ?>
+	
+	<?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php coauthors_posts_links(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+    <?php   
+    } else { ?>
+    		<?php echo get_avatar( get_the_author_meta('ID'), 20); ?> <?php _e('By', 'news-portal' );?> <?php the_author_posts_link(); ?><span>&nbsp&nbsp&nbsp</span><?php the_date(); ?><span>&nbsp&nbsp&nbsp</span><span class="comments-icon"><a href="<?php comments_link(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+    <?php } ?>
+    
 Use this code to add category filter option to WP Customizer options
 
     $wp_customize->add_setting(
@@ -191,3 +201,25 @@ Use this code to add category filter option to WP Customizer options
             )
 			))
     );
+
+This code was removed from the .htaccess file for sportsannouncersreportcard.com
+
+    AddHandler phpCGI .xml .php
+    Action phpCGI /cgi-bin/php5.6fcgi
+    # for php5 and securewebexchange
+    <IfDefine SSL>
+    AddHandler phpCGI .xml .php
+    Action phpCGI https://securec45.securewebsession.com/sportsannouncersreportcard.com/cgi-bin/php5.6fcgi
+    </IfDefine>
+    ###### webforce begin ######
+    DirectoryIndex index.html index.php /hproxy.php
+
+    SetEnv PROXYSERVER https://wfsites.websitecreatorprotool.com
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^hproxy.php
+    RewriteRule ^(.*)$ /hproxy.php/$1 [L,NC,QSA]
+    ###### webforce end ######

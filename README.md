@@ -1,22 +1,42 @@
 # Sports_Broadcast_Journal
 Website for Sports Announcer News
 
-# Domains
+## Domains
 http://www.sportsbroadcastjournal.com/
 - Primary Domain
+- IP 216.55.149.9
+- Page Authority 5.00
+- Domain Authority 6.00
+- MOZ Rank 0.5
+- WordPress 
+
+## Sub Accounts
+*Redirected domains still need to update plugins and themes periodically via the wp-admin login*
+
+https://www.sportsannouncersreportcard.com/
+- (301 redirect in .htaccess)
+- SSL certificate by NameCheap/Comodo (valid through 2019)
+- IP 216.55.151.99
+- Page Authority 9.00
+- Domain Authority 13.00
+- MOZ Rank 0.9
+- WordPress 
 
 https://www.sports-announcers.com/ 
 - (301 redirect in .htaccess)
 - SSL certificate by Comodo (valid through 2019)
 - WHOIS information is public for SSL verification purposes
-
-https://www.sportsannouncersreportcard.com/
-- (Weebly Hosting)
+- IP 216.55.151.26
+- Page Authority 6.00
+- Domain Authority 7.00
+- MOZ Rank 0.6
+- WordPress 
 
 ## Hosting:
 - AT&T Web Hosting (shared service) 2018
 - IP 216.55.149.9
 - FTP compatible
+- Apache Server
 
 ## Database:
 - Database: Carrierzone
@@ -71,9 +91,11 @@ https://www.sportsannouncersreportcard.com/
 - SEOptimer
 - GTMetrix
 - MOZ rank
+- Small SEO Tools Page Authority Checker
 - Pingdom Page Speed Test
 - WPMUdev WP Checkup
 - Google Page Speed Insights
 - Google Mobile Friendly Test
 - Why No Padlock
 - Redirect Detective
+- Redirect Check
