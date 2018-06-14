@@ -41,7 +41,8 @@ http://www.halbygroup.com/
 - IP 216.55.149.9
 - FTP compatible
 - Apache Server
-- Domains registered with Tucows 
+- PHP 5 or higher
+- Registrar: Tucows Inc.
 
 ## Database:
 - Database: Carrierzone
