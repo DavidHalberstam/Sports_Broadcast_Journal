@@ -32,11 +32,16 @@ https://www.sports-announcers.com/
 - MOZ Rank 0.6
 - WordPress 
 
+http://www.halbygroup.com/ 
+- Activated 2009
+- WordPress 
+
 ## Hosting:
 - AT&T Web Hosting (shared service) 2018
 - IP 216.55.149.9
 - FTP compatible
 - Apache Server
+- Domains registered with Tucows 
 
 ## Database:
 - Database: Carrierzone
