@@ -30,6 +30,8 @@
 
 ## Resolved:
 
+- *7/30/18*- The ol numbers were extending out of the boundary of the content area on mobile devices.  This needed to be changed by overriding the parent theme CSS and making the ol display in block format instead of inline.
+- *7/28/18*- Coauthors support added to make multiple author boxes appear
 - *5/31/18*- www.sportsannouncersreportcard.com migrated and redirected to sportsbroadcastjournal.  A SSL certificate was required to redirect link juice from all the https:// backlinks.  After some initial difficulty with configuring the .htaccess file to redirect individual posts, a minor error was discovered where one redirect link did not have http:// in front of it.
 - *5/26/18*- The comments plugin adds a padded div with JavaScript beneath the footer.  The padding should be set to 0 with !important to override the settings.
 - *5/21/18*- Responsive images set to proportionally scale aspect ratio.  Fix involved using a hack that takes advantage of the fact that padding percentages are calculated relative to element width.  Setting a 56% padding with 100% width and height will lock the aspect ratio and scale without deformation or squashing.  The background image still needs a link overlay to be applied by wrapping the image in the overlay container.
