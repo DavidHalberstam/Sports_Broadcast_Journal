@@ -5,9 +5,9 @@ Website for Sports Announcer News
 http://www.sportsbroadcastjournal.com/
 - Primary Domain
 - IP 216.55.149.9
-- Page Authority 5.00
-- Domain Authority 6.00
-- MOZ Rank 0.5
+- Page Authority 26.00
+- Domain Authority 24.00
+- MOZ Rank 2.6
 - WordPress 
 
 ## Sub Accounts
@@ -15,7 +15,7 @@ http://www.sportsbroadcastjournal.com/
 
 https://www.sportsannouncersreportcard.com/
 - (301 redirect in .htaccess)
-- SSL certificate by NameCheap/Comodo (valid through 2019)
+- 2 Year SSL certificate by NameCheap/Comodo (valid through 2021)
 - IP 216.55.151.99
 - Page Authority 9.00
 - Domain Authority 13.00
@@ -24,7 +24,7 @@ https://www.sportsannouncersreportcard.com/
 
 https://www.sports-announcers.com/ 
 - (301 redirect in .htaccess)
-- SSL certificate by Comodo (valid through 2019)
+- SSL certificate by Comodo (Expired 2019)
 - WHOIS information is public for SSL verification purposes
 - IP 216.55.151.26
 - Page Authority 6.00
