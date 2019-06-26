@@ -2,7 +2,7 @@
 Website for Sports Announcer News
 
 ## Domains
-http://www.sportsbroadcastjournal.com/
+https://www.sportsbroadcastjournal.com/
 - Primary Domain
 - IP 216.55.149.9
 - Page Authority 26.00
